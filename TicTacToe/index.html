@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <link rel="stylesheet" href="skeleton.css">
+  <title>TicTacToe 7x7</title>
+  <style>
+    div {
+      text-align: center;
+    }
+  </style>
+</head>
+
+<body>
+  <div class="container">
+
+    <div class="row">
+      <h1>
+        Tic Tac Toe
+      </h1>
+    </div>
+
+    <br>
+
+    <div class="row">
+      <div class="twelve columns">
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th>Agent</th>
+              <th colspan="3">Option</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h6 id="agent"></h6></td>
+              <td><button onclick="switchToRandom()">Random Agent</button></td>
+              <td><button onclick="switchToMinimax()">Minimax Agent</button></td>
+              <td><button onclick="switchToAlphaBeta()">Alpha Beta Agent</button></td>
+            </tr>
+          </tbody>
+        </table>
+
+        <br>
+
+        <table class="u-full-width">
+          <thead>
+            <tr>
+              <th colspan="4">Size</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td><h6 id="agent"></h6></td>
+              <td><a class="button" href="size3.html">3x3</a></td>
+              <td><a class="button" href="size5.html">5x5</a></td>
+              <td><a class="button" href="size7.html">7x7</a></td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+  </div>
+
+  <script>
+    function switchToRandom() {
+      localStorage.setItem('agent', 'random');
+      document.getElementById("agent").innerHTML = "Random Agent Selected";
+    }
+    
+    function switchToMinimax() {
+      localStorage.setItem('agent', 'minimax');
+      document.getElementById("agent").innerHTML = "Minimax Agent Selected";
+    }
+    
+    function switchToAlphaBeta() {
+      localStorage.setItem('agent', 'alphabeta');
+      document.getElementById("agent").innerHTML = "Alpha Beta Agent Selected";
+    }
+  </script>
+</body>
+
+</html>
