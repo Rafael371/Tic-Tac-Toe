@@ -2,7 +2,7 @@
 <br>
 Web-Based Tic Tac Toe games using HTML, CSS, and JavaScript, with implementation of AI.<br><br>
 
-made with 3 different model to defeat player:
+made with 3 different model to defeat player
 - Random Agent
 - MiniMax Agent
 - Alpha Beta Agent<br><br>
